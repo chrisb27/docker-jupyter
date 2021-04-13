@@ -31,7 +31,6 @@ RUN conda install --quiet --yes \
     'protobuf=3.15.*' \
     'pytables=3.6.*' \
     'PyOpenGL' \
-    'piglet' \
     'pyglet' \
     'scikit-image=0.18.*' \
     'scikit-learn=0.24.*' \
