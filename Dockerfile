@@ -1,5 +1,4 @@
-ARG BASE_CONTAINER=jupyter/minimal-notebook
-FROM $BASE_CONTAINER
+FROM jupyter/minimal-notebook
 
 USER root
 
