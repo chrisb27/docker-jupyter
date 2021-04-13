@@ -9,6 +9,7 @@ RUN apt-get update && \
 
 USER $NB_UID
 
+RUN conda install swig
 RUN pip3 install --upgrade pip
 RUN pip3 install box2d-py
 RUN pip3 install gym[Box_2D]
