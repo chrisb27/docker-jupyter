@@ -9,6 +9,8 @@ RUN apt-get update && \
 
 USER $NB_UID
 
+RUN pip3 install --upgrade pip
+
 # Install Python 3 packages
 RUN conda install --quiet --yes \
     'beautifulsoup4=4.9.*' \
@@ -46,6 +48,8 @@ RUN conda install --quiet --yes \
     conda clean --all -f -y && \
     fix-permissions "${CONDA_DIR}" && \
     fix-permissions "/home/${NB_USER}"
+
+RUN pip3 install Box2D
 
 # Install facets which does not have a pip or conda package at the moment
 WORKDIR /tmp
