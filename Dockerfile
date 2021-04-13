@@ -15,11 +15,11 @@ RUN conda install --quiet --yes \
     'conda-forge::blas=*=openblas' \
     'bokeh=2.3.*' \
     'bottleneck=1.3.*' \
+    'Box2D' \
     'cloudpickle=1.6.*' \
     'cython=0.29.*' \
     'dask=2021.4.*' \
     'dill=0.3.*' \
-    'gym[box2d]' \
     'h5py=3.1.*' \
     'ipywidgets=7.6.*' \
     'ipympl=0.7.*'\
