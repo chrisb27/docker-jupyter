@@ -10,6 +10,8 @@ RUN apt-get update && \
 USER $NB_UID
 
 RUN pip3 install --upgrade pip
+RUN pip3 install box2d-py
+RUN pip3 install gym[Box_2D]
 
 # Install Python 3 packages
 RUN conda install --quiet --yes \
@@ -48,7 +50,6 @@ RUN conda install --quiet --yes \
     fix-permissions "${CONDA_DIR}" && \
     fix-permissions "/home/${NB_USER}"
 
-RUN pip3 install Box2D
 
 # Install facets which does not have a pip or conda package at the moment
 WORKDIR /tmp
